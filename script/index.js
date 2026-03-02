@@ -8,7 +8,21 @@ const loadLevelWord = (id) => {
   const url = `https://openapi.programming-hero.com/api/level/${id}`;
   fetch(url)
     .then((res) => res.json())
-    .then((data) => console.log(data));
+    .then((data) => displayLevelWord(data.data));
+}
+
+const displayLevelWord = (words) => {
+  const wordContainer = document.getElementById("word-container");
+  // wordContainer.innerHTML = "";
+
+  words.forEach(word => {
+    console.log(word);
+    const card = document.createElement("div");
+    card.innerHTML = `
+    <p>Cat</p>
+    `;
+    wordContainer.append(card);
+  })
 }
 
 const displayLesson = (lessons) => {
