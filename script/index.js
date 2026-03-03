@@ -14,6 +14,16 @@ const loadLevelWord = (id) => {
 const displayLevelWord = (words) => {
   const wordContainer = document.getElementById("word-container");
   wordContainer.innerHTML = "";
+  if (words.length == 0) {
+    wordContainer.innerHTML = `
+     <div class="text-center col-span-full rounded-xl py-6 space-y-5 font-bangla">
+      <img src="./assets/alert-error.png" alt="" class="mx-auto">
+      <p class="text-[16px] font-medium text-[#79716b] font-bangla">এই Lesson এ এখনো কোন Vocabulary যুক্ত করা হয়নি।</p>
+      <h2 class="font-bold text-4xl font-bangla">নেক্সট Lesson এ যান</h2>
+    </div>
+    `;
+    return;
+  }
 
   // {
   //   "id": 82,
