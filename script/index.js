@@ -1,3 +1,8 @@
+const createElements = (arr) => {
+  const htmlElements = arr.map(el => `<span class="btn">${el}</span>`)
+  return htmlElements.join(" ");
+}
+
 const loadLessons = () => {
   fetch("https://openapi.programming-hero.com/api/levels/all") // promise of response
     .then(res => res.json()) // promise of json data
@@ -24,25 +29,26 @@ const loadLevelWord = (id) => {
 
 /* {
   "word": "Diligent",
-    "meaning": "পরিশ্রমী",
-      "pronunciation": "ডিলিজেন্ট",
-        "level": 5,
-          "sentence": "He is a diligent student who studies every day.",
-            "points": 5,
-              "partsOfSpeech": "adjective",
-                "synonyms": [
-                  "hardworking",
-                  "industrious",
-                  "persistent"
-                ],
-                  "id": 4
+  "meaning": "পরিশ্রমী",
+  "pronunciation": "ডিলিজেন্ট",
+  "level": 5,
+  "sentence": "He is a diligent student who studies every day.",
+  "points": 5,
+  "partsOfSpeech": "adjective",
+  "synonyms": [
+  "hardworking",
+  "industrious",
+  "persistent"],
+  "id": 4
 } */
+
 const loadWordDetail = async (id) => {
   const url = `https://openapi.programming-hero.com/api/word/${id}`;
   const res = await fetch(url);
   const details = await res.json();
   displayWordDetails(details.data);
 }
+
 const displayWordDetails = (word) => {
   console.log(word);
   const detailsBox = document.getElementById("details-container");
@@ -60,9 +66,7 @@ const displayWordDetails = (word) => {
         </div>
         <div class="">
           <h2 class="font-bold">Synonyms</h2>
-          <span class="btn">Syn1</span>
-          <span class="btn">Syn1</span>
-          <span class="btn">Syn1</span>
+          <div class="">${createElements(word.synonyms)}</div>
         </div>
   `;
 
