@@ -77,7 +77,7 @@ const displayWordDetails = (word) => {
         </div>
         <div class="">
           <h2 class="font-bold">Synonyms</h2>
-          <div class="">${createElements(word.synonyms)}</div>
+          <div class="flex items-center gap-3 mt-2">${createElements(word.synonyms)}</div>
         </div>
   `;
 
