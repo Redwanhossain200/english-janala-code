@@ -59,8 +59,9 @@
             </li>
 
             <li>
-              <a href="" class="hover:bg-[#badeff42] backdrop-blur-2xl"><i
-                  class="fa-solid fa-arrow-right-from-bracket"></i>Logout</a>
+              <a href="" onclick="handleLogout(event)" class="hover:bg-[#badeff42] backdrop-blur-2xl">
+                <i class="fa-solid fa-arrow-right-from-bracket"></i>Logout
+              </a>
             </li>
           </ul>
         </div>
@@ -81,8 +82,9 @@
           </li>
 
           <li>
-            <a href="" class="btn btn-outline btn-primary"><i
-                class="fa-solid fa-arrow-right-from-bracket"></i>Logout</a>
+            <a href="" onclick="handleLogout(event)" class="btn btn-outline btn-primary">
+              <i class="fa-solid fa-arrow-right-from-bracket"></i>Logout
+            </a>
           </li>
         </ul>
       </div>
@@ -101,7 +103,8 @@
         Lessons আপনাকে নিয়ে যাবে অন্য একটি Level এ</p>
       <div class="mt-5 flex flex-col gap-3 items-center md:items-start sm:w-3/4">
         <input type="text" class="input outline-none rounded-lg p-4" placeholder="Enter Your Name" name="name" required>
-        <input type="password" class="input outline-none rounded-lg p-4" value="password" name="password" required>
+        <input type="password" class="input outline-none rounded-lg p-4" placeholder="Enter Your Password"
+          name="password" required>
         <button class="btn btn-primary mt-5 rounded-xl">Get Started</button>
       </div>
     </div>
@@ -208,21 +211,21 @@
   </section>
 
   <footer class="bg-[#F3F9FF] mt-20 py-10 border-t border-gray-200">
-    <div
-      class="w-11/12 mx-auto flex flex-row justify-between items-start md:items-center gap-8">
-      <div class="space-y-3">
-        <a href="" class="flex items-center gap-1">
+    <div class="w-11/12 mx-auto flex flex-col md:flex-row justify-between items-center gap-10 text-center">
+
+      <div class="space-y-3 flex flex-col items-center md:items-start">
+        <a href="" class="flex justify-center items-center gap-1">
           <span class="text-lg font-bold">English</span>
           <img src="./assets/logo.png" alt="logo" class="w-8">
           <span class="font-bangla text-lg font-semibold">জানালা</span>
         </a>
-        <h3 class="font-bangla font-bold text-xl">ইংরেজি শিখুন সহজে</h3>
-        <p class="text-gray-500 text-sm">Providing ED-Tech Applications since 2025 </p>
+        <h3 class="font-bangla font-bold text-xl text-center md:text-left">ইংরেজি শিখুন সহজে</h3>
+        <p class="text-gray-500 text-sm">Providing ED-Tech Applications since 2025</p>
       </div>
 
-      <div class="flex flex-col items-center md:items-start gap-3">
+      <div class="flex flex-col justify-center items-center md:items-start gap-3">
         <span class="font-bold text-sm text-gray-700">FOLLOW US</span>
-        <div class="flex gap-3 text-2xl">
+        <div class="flex gap-4 text-2xl">
           <button class="hover:text-blue-600 transition-colors cursor-pointer"><i
               class="fa-brands fa-facebook"></i></button>
           <button class="hover:text-red-600 transition-colors cursor-pointer"><i
@@ -232,6 +235,7 @@
           <button class="hover:text-black transition-colors cursor-pointer"><i class="fa-brands fa-github"></i></button>
         </div>
       </div>
+
     </div>
   </footer>
 

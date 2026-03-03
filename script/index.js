@@ -173,3 +173,19 @@ document.getElementById("btn-search").addEventListener("click", () => {
       displayLevelWord(filterWords);
     });
 });
+
+const handleLogout = (event) => {
+  event.preventDefault();
+
+  const nameInput = document.querySelector('input[name="name"]');
+  const passwordInput = document.querySelector('input[name="password"]');
+
+  if (nameInput) nameInput.value = "";
+  if (passwordInput) passwordInput.value = "";
+
+  alert("You have been logged out successfully!");
+
+  window.scrollTo(0, 0);
+
+  location.reload();
+}
